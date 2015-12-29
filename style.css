@@ -1,0 +1,191 @@
+body {
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMDAwMDAwQEBAQFBQUFBQcHBgYHBwsICQgJCAsRCwwLCwwLEQ8SDw4PEg8bFRMTFRsfGhkaHyYiIiYwLTA+PlQBAwMDAwMDBAQEBAUFBQUFBwcGBgcHCwgJCAkICxELDAsLDAsRDxIPDg8SDxsVExMVGx8aGRofJiIiJjAtMD4+VP/CABEIADIAMgMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAgEDCf/aAAgBAQAAAAD0Mbs1NbFSFTSSiW5SW5UgdM3nf//EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIQAAAAAAD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oACAEDEAAAAAAA/8QALRAAAgAEBAQDCQAAAAAAAAAAAAECESExEiJBURAyYYFxkaEDUnKCosHR8PH/2gAIAQEAAT8AWX8j34KUVCvloc1dLIXtGkkLZXKDyrqYVuSf1WK6/wBM5NYqxd+hqctuwxXYn28CfUVup7qstB5akmePmYfXYlwoSHKEbc3Mill4O/7YmorepWg24ZyRXQ1MKIqL5hcyIUngmr3NCSzDu/h+5JH/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAECAQE/AAf/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAEDAQE/AAf/2Q==);
+	background-repeat: repeat;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#menu a {
+	color: black;
+}
+
+
+.intro {
+	text-align: center;
+}
+
+.intro > h1 {
+	color: rgb(46, 139, 146);
+	font-family: arial;
+	font-size: 50px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px gray;
+}
+
+.intro > h3 {
+	margin-top: -25px;
+	color: #505050;
+}
+
+a, a:hover, a:active, a:visited {
+	text-decoration: none;
+	color: beige;
+}
+
+a.underl {
+	text-decoration: underline;
+	font-size: 17px;
+	font-family: monospace;
+}
+
+.page-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.col-span { padding: 50px 0;}
+
+@media screen and (min-width: 769px) {
+	.col-span { width: 30%; float: left;}
+}
+
+@media screen and (max-width: 768px) {
+	.page-container { width: 90%; margin: 0 auto;}
+}
+
+.openbox-module {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	border-radius: 20px;
+	position: relative;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	cursor: default;
+}
+.openbox-wrap {
+	width: 180px;
+	height: 180px;
+	border-radius: 20px;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	-ms-perspective: 800px;
+	perspective: 800px;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	top: 20px;
+	left: 20px;
+}
+.openbox {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	border-radius: 20px;
+	box-shadow: 2px 2px 8px gray;
+	-webkit-transform-origin: 100% 40%;
+	-moz-transform-origin: 100% 40%;
+	-o-transform-origin: 100% 40%;
+	-ms-transform-origin: 100% 40%;
+	transform-origin: 100% 40%;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.openbox > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	background-position: center center;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.openbox .openbox-back {
+	-webkit-transform: rotate3d(0, 1, 0, 180deg);
+	-moz-transform: rotate3d(0, 1, 0, 180deg);
+	-o-transform: rotate3d(0, 1, 0, 180deg);
+	-ms-transform: rotate3d(0, 1, 0, 180deg);
+	transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.openbox-module:hover .openbox-wrap {
+	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8), inset 0 0 3px rgba(115, 114, 23, 0.8);
+	z-index: 9999999;
+}
+.openbox-module:hover .openbox {
+	/*
+	* rotate3d(0, 1, 0, -70deg): - open from inside;
+	* rotate3d(0, 1, 0, 160deg): - default opening from outside from right;
+	*/
+	-webkit-transform: rotateY(150deg);
+	-moz-transform: rotateY(150deg);
+	-o-transform: rotateY(150deg);
+	-ms-transform: rotateY(150deg);
+	transform: rotateY(150deg);
+	z-index: 9999999;
+}
+
+.openbox-content { text-align: center; padding: 70px 8px 0 8px;}
+.openbox-wrap { background-color: darkgray; color: beige; }
+.openbox-front .openbox-content { font-size: 30px!important; padding-top: 70px!important;}
+
+
+
+/* better not touch the classes above, for each new box module */
+
+#module-utplaylist .openbox-front {
+	background: #ff3019;
+	background: -moz-radial-gradient(center, ellipse cover, #ff3019 0%, #cf0404 46%);
+	background: -webkit-radial-gradient(center, ellipse cover, #ff3019 0%,#cf0404 46%);
+	background: radial-gradient(ellipse at center, #ff3019 0%,#cf0404 46%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );
+	color: white;
+	text-shadow: 0 0 23px peru;
+}
+#module-utplaylist .openbox-back {
+	background: #feffe8;
+	background: -moz-radial-gradient(center, ellipse cover, #feffe8 0%, #d6dbbf 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #feffe8 0%,#d6dbbf 100%);
+	background: radial-gradient(ellipse at center, #feffe8 0%,#d6dbbf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffe8', endColorstr='#d6dbbf',GradientType=1 );
+	color: black;
+}
+
+#module-notifoo .openbox-front {
+	background: #cdeb8e;
+	background: -moz-radial-gradient(center, ellipse cover, #cdeb8e 0%, #a5c956 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #cdeb8e 0%,#a5c956 100%);
+	background: radial-gradient(ellipse at center, #cdeb8e 0%,#a5c956 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 );
+	color: white;
+	text-shadow: 0 0 23px black;
+}
+#module-notifoo .openbox-back {
+	background: #feffe8;
+	background: -moz-radial-gradient(center, ellipse cover, #feffe8 0%, #d6dbbf 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #feffe8 0%,#d6dbbf 100%);
+	background: radial-gradient(ellipse at center, #feffe8 0%,#d6dbbf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffe8', endColorstr='#d6dbbf',GradientType=1 );
+	color: black;
+}
+
+
+/* paddings */
+#module-utplaylist .openbox-wrap .openbox-content { padding-top: 30px; font-size: 20px;}
+#module-utplaylist .openbox-back .openbox-content { padding-top: 20px; font-size: 15px;}
+#module-notifoo .openbox-wrap .openbox-content { padding-top: 20px; font-size: 20px;}
+#module-notifoo .openbox-back .openbox-content { padding-top: 20px; font-size: 15px;}
+
