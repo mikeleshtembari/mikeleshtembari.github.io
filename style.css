@@ -1,16 +1,32 @@
 body {
 	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMDAwMDAwQEBAQFBQUFBQcHBgYHBwsICQgJCAsRCwwLCwwLEQ8SDw4PEg8bFRMTFRsfGhkaHyYiIiYwLTA+PlQBAwMDAwMDBAQEBAUFBQUFBwcGBgcHCwgJCAkICxELDAsLDAsRDxIPDg8SDxsVExMVGx8aGRofJiIiJjAtMD4+VP/CABEIADIAMgMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAgEDCf/aAAgBAQAAAAD0Mbs1NbFSFTSSiW5SW5UgdM3nf//EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIQAAAAAAD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oACAEDEAAAAAAA/8QALRAAAgAEBAQDCQAAAAAAAAAAAAECESExEiJBURAyYYFxkaEDUnKCosHR8PH/2gAIAQEAAT8AWX8j34KUVCvloc1dLIXtGkkLZXKDyrqYVuSf1WK6/wBM5NYqxd+hqctuwxXYn28CfUVup7qstB5akmePmYfXYlwoSHKEbc3Mill4O/7YmorepWg24ZyRXQ1MKIqL5hcyIUngmr3NCSzDu/h+5JH/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAECAQE/AAf/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAEDAQE/AAf/2Q==);
 	background-repeat: repeat;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+
+body { font-family: "Trebuchet MS", Helvetica, sans-serif;}
+
+.show-page { display: block;}
+
+.hide-page { display: none;}
 
 #menu a {
 	color: black;
 }
 
+.break {
+	margin-bottom: 260px;
+}
 
 .intro {
 	text-align: center;
+	padding: 0 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMDAwMDAwQEBAQFBQUFBQcHBgYHBwsICQgJCAsRCwwLCwwLEQ8SDw4PEg8bFRMTFRsfGhkaHyYiIiYwLTA+PlQBAwMDAwMDBAQEBAUFBQUFBwcGBgcHCwgJCAkICxELDAsLDAsRDxIPDg8SDxsVExMVGx8aGRofJiIiJjAtMD4+VP/CABEIADIAMgMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAgEDCf/aAAgBAQAAAAD0Mbs1NbFSFTSSiW5SW5UgdM3nf//EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIQAAAAAAD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oACAEDEAAAAAAA/8QALRAAAgAEBAQDCQAAAAAAAAAAAAECESExEiJBURAyYYFxkaEDUnKCosHR8PH/2gAIAQEAAT8AWX8j34KUVCvloc1dLIXtGkkLZXKDyrqYVuSf1WK6/wBM5NYqxd+hqctuwxXYn28CfUVup7qstB5akmePmYfXYlwoSHKEbc3Mill4O/7YmorepWg24ZyRXQ1MKIqL5hcyIUngmr3NCSzDu/h+5JH/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAECAQE/AAf/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAEDAQE/AAf/2Q==);
+	background-repeat: repeat;
 }
 
 .intro > h1 {
@@ -23,7 +39,12 @@ body {
 
 .intro > h3 {
 	margin-top: -25px;
-	color: #505050;
+	color: darkgray;
+}
+
+.liner {
+	height: 0;
+	margin-bottom: 0;
 }
 
 a, a:hover, a:active, a:visited {
@@ -50,6 +71,13 @@ a.underl {
 
 @media screen and (max-width: 768px) {
 	.page-container { width: 90%; margin: 0 auto;}
+}
+
+@media screen and (max-width:  411px) {
+	.break { margin-bottom: 240px;}
+	.intro > h1 { margin-top: 5px;}
+	.intro > h3 { margin-top: -30px; margin-bottom: -10px;}
+	.liner { margin-top: -20px;}
 }
 
 .openbox-module {
