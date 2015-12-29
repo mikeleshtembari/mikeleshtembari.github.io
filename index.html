@@ -20,9 +20,9 @@
                 | <a href="#" id="contact">Contact</a>
              </div>
             <br><br>
-            <hr>
-            <br>
+            <hr class="liner">
         </div>
+        <div class="break"></div>
         <div id="page-home" class="show-page">
             <center><h4>Some stuff I've made in my very limitted free time:</h4></center>
             <div class="col-span">
@@ -114,11 +114,11 @@ $(function () {
 
     $('#menu a').click(function () {
         var pageId = $(this).attr('id');
-        $('.show-page').slideUp(850);
+        $('.show-page').fadeOut();
         setTimeout(function () {
             $('.show-page').toggleClass('show-page').toggleClass('hide-page');
             $('#page-' + pageId).fadeIn().toggleClass('show-page').toggleClass('hide-page');
-        }, 1000);
+        }, 500);
     });
 });
 
