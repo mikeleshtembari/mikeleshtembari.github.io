@@ -58,6 +58,19 @@ a.underl {
 	font-family: monospace;
 }
 
+.cnt {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+}
+
+.cnt img {
+	width: 45px;
+	height: auto;
+}
+
+
+
 .page-container {
 	width: 80%;
 	margin: 0 auto;
