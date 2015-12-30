@@ -14,7 +14,7 @@ body { font-family: "Trebuchet MS", Helvetica, sans-serif;}
 }
 
 .break {
-	margin-bottom: 260px;
+	margin-bottom: 180px;
 }
 
 .intro {
@@ -35,16 +35,21 @@ body { font-family: "Trebuchet MS", Helvetica, sans-serif;}
 	font-size: 50px;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px gray;
+	margin-top: 10px;
+	margin-bottom: 23px;
 }
 
 .intro > h3 {
 	margin-top: -25px;
+	margin-bottom: -5px;
 	color: darkgray;
 }
 
 .liner {
 	height: 0;
 	margin-bottom: 0;
+	margin-top: 15px;
+	width: 80%;
 }
 
 a, a:hover, a:active, a:visited {
@@ -76,7 +81,74 @@ a.underl {
 	margin: 0 auto;
 }
 
-.col-span { padding: 50px 0;}
+.active {
+	zoom: 120%;
+	-moz-transform: scale(1.2);
+	color: gray;
+	padding: 4px 4px;
+	font-weight: bold;
+}
+
+#menu {
+	box-shadow: 2px 2px 5px gray;
+	width: 340px;
+	margin: 0 auto;
+	border-radius: 3px;
+	border: 1px solid lightgray;
+}
+
+.contact-info {
+	width: 290px;
+	margin: 50px auto;
+}
+
+.contact-info > .cil {
+	float: left;
+	width: 100px;
+	text-align: right;
+	font-style: italic;
+	color: gray;
+	margin-left: -30px;
+	margin-right: 10px;
+}
+
+.contact-info > .cir {
+	float: left;
+	width: 190px;
+	text-align: left;
+}
+
+
+.social-buttons {
+}
+
+.social-container {
+	height: 35px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.social-container > a > img {
+	width: 35px;
+	height: auto;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+	-webkit-transition: transform .2s ease-in-out;
+	-moz-transition: transform .2s ease-in-out;
+	-o-transition: transform .2s ease-in-out;
+	transition: transform .2s ease-in-out;
+}
+
+.social-container > a > img:hover {
+	-webkit-transform: translate3d(0px, -35px, 0px);
+	-moz-transform: translate3d(0px, -35px, 0px);
+	-o-transform: translate3d(0px, -35px, 0px);
+	transform: translate3d(0px, -35px, 0px);
+}
+
+.col-span { padding: 20px 0 0 0;}
 
 @media screen and (min-width: 769px) {
 	.col-span { width: 30%; float: left;}
@@ -87,10 +159,11 @@ a.underl {
 }
 
 @media screen and (max-width:  411px) {
-	.break { margin-bottom: 240px;}
-	.intro > h1 { margin-top: 5px;}
-	.intro > h3 { margin-top: -30px; margin-bottom: -10px;}
-	.liner { margin-top: -20px;}
+	.break { margin-bottom: 145px;}
+	.intro > h1 { margin-top: 5px; font-size: 28px; margin-bottom: 33px;}
+	.intro > h3 { margin-top: -30px; margin-bottom: -10px; font-size: 15px;}
+	.liner { margin-top: 10px;}
+	#menu * { font-size: 14px;}
 }
 
 .openbox-module {
