@@ -3,6 +3,8 @@ body {
 	background-repeat: repeat;
 }
 
+* { outline: 0;}
+
 body { font-family: "Trebuchet MS", Helvetica, sans-serif;}
 
 .show-page { display: block;}
